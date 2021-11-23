@@ -1,6 +1,14 @@
 function agregarElemento() {
-    var texto = document.getElementById( 'texto' )
+    var h1 = document.createElement('h1')
+    var texto = document.getElementById('texto')
+    var contenido = document.createTextNode( texto.value )
+    h1.appendChild( contenido )
 
     var container = document.getElementById('container')
-    container.innerHTML = "<h1>" + texto.value + "</h1>"
+    container.appendChild( h1 )
+}
+
+function eliminarElemento() {
+    var container = document.getElementById('container')
+    container.removeChild( container.lastElementChild )
 }
