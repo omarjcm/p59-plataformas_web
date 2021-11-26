@@ -20,7 +20,8 @@ divCajita.addEventListener('mouseup', function() {
 
 divCajita.addEventListener('mousemove', function(e) {
     console.log('[mousemove]')
-
+    
+    e.preventDefault()
     if (esPresionada) {
         divCajita.style.left = (e.clientX + offset[0]) + 'px'
         divCajita.style.top = (e.clientY + offset[1]) + 'px'
