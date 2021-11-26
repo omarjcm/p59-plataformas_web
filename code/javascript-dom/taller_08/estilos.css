@@ -29,10 +29,28 @@
 
 .content {
     grid-area: content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .footer {
     grid-area: footer;
     background-color: darkblue;
     color: white;
+}
+
+.formulario {
+    background-color: whitesmoke;
+    list-style-type: none;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    width: 600px;
+}
+
+.formulario-fila {
+    display: flex;
+    justify-content: flex-end;
+    padding: .5em;
 }
