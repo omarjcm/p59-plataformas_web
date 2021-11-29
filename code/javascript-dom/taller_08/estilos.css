@@ -36,7 +36,7 @@
 
 .footer {
     grid-area: footer;
-    background-color: darkblue;
+    background-color:  darkblue;
     color: white;
 }
 
@@ -53,4 +53,22 @@
     display: flex;
     justify-content: flex-end;
     padding: .5em;
+}
+
+.formulario-fila > label {
+    padding: .5em 1em .5em 0;
+}
+
+.formulario-fila > input {
+    flex: 1;
+}
+
+.formulario-fila > input, .formulario-fila > button {
+    padding: .5em;
+}
+
+.formulario-fila > button {
+    background: gray;
+    color: white;
+    border: 0px;
 }
