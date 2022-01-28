@@ -11,7 +11,11 @@ app.use( bodyParser.urlencoded({extended:false}) )
 app.use( router )
 
 router.get('/mensaje', function(req, res) {
-    response.success(req, res, 'Hola desde GET')
+    if (req.query.error == 'ok') {
+        response.error(req, res, 'Error en el GET.')
+    } else {
+        response.success(req, res, 'Hola desde GET')
+    }
 })
 
 router.post('/mensaje', function(req, res) {
