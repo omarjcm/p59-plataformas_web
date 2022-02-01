@@ -1,4 +1,6 @@
 INSERT INTO pais(id_pais, nombre) VALUES (1, 'Ecuador'); 
+INSERT INTO pais(id_pais, nombre) VALUES (2, 'Colombia'); 
+INSERT INTO pais(id_pais, nombre) VALUES (3, 'Peru'); 
 
 INSERT INTO ciudad(id_ciudad, nombre, ref_pais) VALUES (1, 'Guayaquil', 1); 
 INSERT INTO ciudad(id_ciudad, nombre, ref_pais) VALUES (2, 'Quito', 1); 
