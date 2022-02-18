@@ -12,6 +12,11 @@ function agregarChat( usuarios ) {
     })
 }
 
+function getChats( data ) {
+    return storage.get( data )
+}
+
 module.exports = {
     agregarChat,
+    getChats,
 }
