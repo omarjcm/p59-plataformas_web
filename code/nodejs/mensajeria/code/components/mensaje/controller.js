@@ -19,7 +19,21 @@ function obtenerMensajes( filtro ) {
     })
 }
 
+function actualizarMensaje(data) {
+    return new Promise((resolve, reject) => {
+        resolve( storage.actualizar( data ) )
+    })    
+}
+
+function eliminarMensaje(data) {
+    return new Promise((resolve, reject) => {
+        resolve( storage.eliminar( data ) )
+    })
+}
+
 module.exports = {
     agregarMensaje,
     obtenerMensajes,
+    actualizarMensaje,
+    eliminarMensaje,
 }

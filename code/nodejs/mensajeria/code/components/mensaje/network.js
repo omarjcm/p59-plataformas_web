@@ -21,6 +21,24 @@ routes.get('/', function(req, res) {
         }))
 })
 
+routes.patch('/', function(req, res) {
+    controller.actualizarMensaje(req.body)
+        .then((dato) => {
+            response.success(req, res, dato, 200)
+        })
+        .catch(((error) => {
+            response.error(req, res, error.descripcion, 500, error.tecnico)
+        }))
+})
 
+routes.delete('/', function(req, res) {
+    controller.eliminarMensaje(req.body)
+        .then((dato) => {
+            response.success(req, res, dato, 200)
+        })
+        .catch(((error) => {
+            response.error(req, res, error.descripcion, 500, error.tecnico)
+        }))
+})
 
 module.exports = routes

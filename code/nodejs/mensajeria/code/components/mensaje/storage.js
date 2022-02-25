@@ -30,7 +30,20 @@ function obtenerMensajes( filtro ) {
     })
 } 
 
+async function actualizarMensaje(data) {
+    const mensaje = await Model.findOne( {_id:data.id} )
+    mensaje.mensaje = data.mensaje
+    const resultado = await mensaje.save()
+    return resultado
+}
+
+async function eliminarMensaje(data) {
+    return await Model.deleteOne( {_id:data.id} )
+}
+
 module.exports = {
     agregar: agregarMensaje,
     obtener: obtenerMensajes,
+    actualizar: actualizarMensaje,
+    eliminar: eliminarMensaje,
 }
