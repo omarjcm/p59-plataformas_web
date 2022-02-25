@@ -10,4 +10,17 @@ routes.post('/', function(req, res){
         .catch((error) => response.error(req, res, error.descripcion, 400, error.tecnico) )
 })
 
+routes.get('/', function(req, res) {
+    const filtrarMensaje = req.body.chat || null
+    controller.obtenerMensajes(filtrarMensaje)
+        .then((dato) => {
+            response.success(req, res, dato, 200)
+        })
+        .catch(((error) => {
+            response.error(req, res, error.descripcion, 500, error.tecnico)
+        }))
+})
+
+
+
 module.exports = routes

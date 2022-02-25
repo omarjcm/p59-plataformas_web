@@ -13,6 +13,13 @@ function agregarMensaje( dato ) {
     })
 }
 
+function obtenerMensajes( filtro ) {
+    return new Promise((resolve, reject) => {
+        resolve( storage.obtener( filtro ) )
+    })
+}
+
 module.exports = {
     agregarMensaje,
+    obtenerMensajes,
 }
